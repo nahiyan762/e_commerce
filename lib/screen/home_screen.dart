@@ -21,13 +21,16 @@ class HomeScreen extends StatelessWidget {
       {"icon": "assets/images/qcoom_logo_gray.svg", "text": "Dhamaka Returns"},
     ];
 
+
     return Scaffold(
       appBar: AppBar(
         actions: [
           const Expanded(
             child: Padding(
                 padding: EdgeInsets.only(right: 16, left: 16),
-                child: SearchWidget()),
+                child: SearchWidget()
+            )
+            ,
           ),
           Padding(
               padding: const EdgeInsets.only(right: 16),
@@ -41,16 +44,59 @@ class HomeScreen extends StatelessWidget {
             children: [
               Container(
                 child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: List.generate(
-                        categories.length,
-                        (index) => CategoryWidget(
-                            icon: categories[index]["icon"],
-                            text: categories[index]["text"],
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: CategoryWidget(
+                            icon: categories[0]["icon"],
+                            text: categories[0]["text"],
                             press: () {}
-                            )
-                    )
+                          ),
+                        ),
+                    ),
+                    Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(vertical: 8),
+                          child: CategoryWidget(
+                              icon: categories[1]["icon"],
+                              text: categories[1]["text"],
+                              press: () {}
+                          ),
+                        ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 8),
+                        child: CategoryWidget(
+                            icon: categories[2]["icon"],
+                            text: categories[2]["text"],
+                            press: () {}
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 8),
+                        child: CategoryWidget(
+                            icon: categories[3]["icon"],
+                            text: categories[3]["text"],
+                            press: () {}
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 8),
+                        child: CategoryWidget(
+                            icon: categories[4]["icon"],
+                            text: categories[4]["text"],
+                            press: () {}
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               )
             ],
@@ -60,3 +106,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
