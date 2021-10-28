@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:qcoom_shopping/constants.dart';
 import 'package:qcoom_shopping/size_config.dart';
-import 'package:qcoom_shopping/weight/search_weight.dart';
+import 'package:qcoom_shopping/widget/category_widget.dart';
+import 'package:qcoom_shopping/widget/search_widget.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,15 +13,21 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
+    List<Map<String, dynamic>> categories = [
+      {"icon": "assets/images/category.svg", "text": "Category"},
+      {"icon": "assets/images/qcoom_logo_gray.svg", "text": "Campaign"},
+      {"icon": "assets/images/qcoom_logo_gray.svg", "text": "Big Billion Return"},
+      {"icon": "assets/images/qcoom_logo_gray.svg", "text": "Gift Card"},
+      {"icon": "assets/images/qcoom_logo_gray.svg", "text": "Dhamaka Returns"},
+    ];
+
     return Scaffold(
       appBar: AppBar(
         actions: [
           const Expanded(
             child: Padding(
                 padding: EdgeInsets.only(right: 16, left: 16),
-                child: SearchWeight()
-            )
-            ,
+                child: SearchWidget()),
           ),
           Padding(
               padding: const EdgeInsets.only(right: 16),
@@ -34,60 +41,16 @@ class HomeScreen extends StatelessWidget {
             children: [
               Container(
                 child: Row(
-
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8),
-                          child: Column(
-                                children: [
-                                  WebsafeSvg.asset("assets/images/category.svg", height: 40, width: 40),
-                                  const SizedBox(height: 8),
-                                  Text('Category', textAlign: TextAlign.center, style: Theme.of(context).textTheme.subtitle2)
-                                ],
-                              ),
-                        ),
-                    ),
-                    Expanded(
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(vertical: 8),
-                          child: Column(
-                            children: [
-                              WebsafeSvg.asset("assets/images/qcoom_logo_gray.svg", height: 40, width: 40),
-                              SizedBox(height: 8),
-                              Text('Campaign', textAlign: TextAlign.center, style: Theme.of(context).textTheme.subtitle2)
-                            ],
-                          ),
-                        ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                        child: Column(
-                            children: [
-                              WebsafeSvg.asset("assets/images/qcoom_logo_gray.svg", height: 40, width: 40),
-                              SizedBox(height: 8),
-                              Text('Big Billion Returns', textAlign: TextAlign.center, style: Theme.of(context).textTheme.subtitle2)
-                            ],
-                          ),
-
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                        child: Column(
-                            children: [
-                              Center(child: WebsafeSvg.asset("assets/images/qcoom_logo_gray.svg", height: 40, width: 40)),
-                              SizedBox(height: 8),
-                              Text('Dhamaka Returns', textAlign: TextAlign.center, style: Theme.of(context).textTheme.subtitle2)
-                            ],
-                          ),
-
-                      ),
-                    ),
-                  ],
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: List.generate(
+                        categories.length,
+                        (index) => CategoryWidget(
+                            icon: categories[index]["icon"],
+                            text: categories[index]["text"],
+                            press: () {}
+                            )
+                    )
                 ),
               )
             ],
@@ -97,5 +60,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
