@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:qcoom_shopping/screen/home_screen.dart';
+import 'package:qcoom_shopping/screen/home/home_screen.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 import '../constants.dart';

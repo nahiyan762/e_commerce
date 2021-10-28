@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:qcoom_shopping/screen/home_screen.dart';
+import 'package:qcoom_shopping/screen/home/home_screen.dart';
 import 'screen/splash_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {

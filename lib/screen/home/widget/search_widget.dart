@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:websafe_svg/websafe_svg.dart';
-import '../constants.dart';
-import '../theme.dart';
+
+import '../../../constants.dart';
 
 class SearchWidget extends StatelessWidget {
   const SearchWidget({Key? key}) : super(key: key);
@@ -13,7 +13,8 @@ class SearchWidget extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(50.0)),
           color: Colors.white,
-          border: Border.all(width: 1, color: primaryColor)),
+          border: Border.all(width: 1, color: primaryColor)
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
