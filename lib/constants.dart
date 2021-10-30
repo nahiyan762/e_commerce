@@ -23,7 +23,7 @@ final headingStyle = TextStyle(
 );
 
 final titleStyle = TextStyle(
-  fontSize: getResponsiveWidth(28, 45),
+  fontSize: getResponsiveWidth(25, 45),
   fontWeight: FontWeight.bold,
   color: kTitleTextColor,
   height: 1.5
