@@ -34,9 +34,9 @@ InputDecorationTheme inputDecorationTheme() {
 TextTheme textTheme() {
   return TextTheme(
     headline1: TextStyle(fontSize: 30, fontFamily: 'Lato', color: primaryColor),
-    headline2: TextStyle(fontSize: 20, fontFamily: 'Lato', color: primaryColor),
+    headline2: TextStyle(fontSize: 20, fontFamily: 'Lato', color: kTitleTextColor),
     subtitle1: TextStyle(fontSize: 15, fontFamily: 'Lato', color: primaryColor),
-    subtitle2: TextStyle(fontSize: 15, fontFamily: 'Lato', color:primaryColor),
+    subtitle2: TextStyle(fontSize: 15, fontFamily: 'Lato', color:kTitleTextColor),
   );
 }
 

@@ -28,3 +28,19 @@ double getProportionateScreenWidth(double inputWidth) {
   // 375 is the layout width that designer use
   return (inputWidth / 375.0) * screenWidth!;
 }
+
+double getResponsiveWidth(double minWidth, double maxWidth) {
+  if (SizeConfig.screenWidth! < 768) {
+    return SizeConfig.screenWidth! / minWidth;
+  } else {
+    return SizeConfig.screenWidth! / maxWidth;
+  }
+}
+
+double getResponsiveHeight(double minHeight, double maxHeight) {
+  if (SizeConfig.screenHeight! < 869) {
+    return SizeConfig.screenHeight! / minHeight;
+  } else {
+    return SizeConfig.screenHeight! / maxHeight;
+  }
+}

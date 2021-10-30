@@ -19,10 +19,10 @@ class BannerHome extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: ImageSlideshow(
         isLoop: true,
-        autoPlayInterval: 1000,
+        autoPlayInterval: 3000,
         indicatorColor: primaryColor,
         children: List.generate(imgList.length,
                 (index) => ClipRRect(

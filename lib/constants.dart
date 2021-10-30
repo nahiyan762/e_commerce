@@ -10,8 +10,8 @@ const textColorUnSelected = Color(0xFF000000);
 const kBgLightColor = Color(0xFFF2F4FC);
 const kBgDarkColor = Color(0xFFEBEDFA);
 const kBadgeColor = Color(0xFFEE376E);
-const kGrayColor = Color(0xFF8793B2);
-const kTitleTextColor = Color(0xFF30384D);
+const kGrayColor = Color(0xFFF4F4F4);
+const kTitleTextColor = Color(0xFF3A494E);
 const kDefaultPadding = 20.0;
 const purpleColor = "#F0105B";
 const kAnimationDuration = Duration(milliseconds: 200);
@@ -19,8 +19,20 @@ const kAnimationDuration = Duration(milliseconds: 200);
 final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),
   fontWeight: FontWeight.bold,
-  color: Colors.white,
-  height: 1.5,
+  color: kTitleTextColor,
+);
+
+final titleStyle = TextStyle(
+  fontSize: getResponsiveWidth(28, 45),
+  fontWeight: FontWeight.bold,
+  color: kTitleTextColor,
+  height: 1.5
+);
+
+final subTitleStyle = TextStyle(
+  fontSize: getResponsiveWidth(35, 55),
+  color: kTitleTextColor,
+  height: 1.5
 );
 
 const defaultDuration = Duration(milliseconds: 250);

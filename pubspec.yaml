@@ -42,6 +42,7 @@ dependencies:
   percent_indicator: ^2.1.7+2
   fl_chart: ^0.12.3
   websafe_svg: ^1.1.4+1
+  flutter_image_slideshow: any
 
 dev_dependencies:
   flutter_test:

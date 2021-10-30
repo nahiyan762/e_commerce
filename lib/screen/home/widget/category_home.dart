@@ -35,10 +35,10 @@ class CategoryHome extends StatelessWidget {
                           margin: EdgeInsets.all(8),
                           child: Column(
                             children: [
-                              WebsafeSvg.asset(categories[0]["icon"],
+                              WebsafeSvg.asset(categories[index]["icon"],
                                   height: 40, width: 40),
                               const SizedBox(height: 8),
-                              Text(categories[0]["text"],
+                              Text(categories[index]["text"],
                                   textAlign: TextAlign.center,
                                   style: Theme.of(context).textTheme.subtitle2)
                             ],
