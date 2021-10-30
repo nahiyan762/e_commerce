@@ -21,19 +21,22 @@ class SearchWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Expanded(
+          Expanded(
             flex: 7,
             child: Padding(
               padding: EdgeInsets.only(left: 16, right: 4),
-              child: TextField(
-                maxLines: 1,
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Search',
-                ),
-                style: TextStyle(
-                  fontSize: 17,
-                  color: primaryColor
+              child: Container(
+                child: TextFormField(
+                  maxLines: 1,
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(bottom: 8),
+                    border: InputBorder.none,
+                    hintText: 'Search',
+                  ),
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: primaryColor,
+                  ),
                 ),
               ),
             ),

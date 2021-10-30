@@ -42,7 +42,7 @@ double getProportionateScreenWidth(double inputWidth) {
 }
 
 double getResponsiveWidth(double minWidth, double maxWidth) {
-  if (SizeConfig.screenWidth! < 768) {
+  if (SizeConfig.screenWidth! < 650) {
     return SizeConfig.screenWidth! / minWidth;
   } else {
     return SizeConfig.screenWidth! / maxWidth;

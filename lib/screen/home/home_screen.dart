@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
         actions: [
           const Expanded(
             child: Padding(
-                padding: EdgeInsets.only(right: 16, left: 16),
+                padding: EdgeInsets.only(right: 16, left: 16, top: 4, bottom: 4),
                 child: SearchWidget()
             ),
           ),
