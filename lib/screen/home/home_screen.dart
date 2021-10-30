@@ -22,18 +22,23 @@ class HomeScreen extends StatelessWidget {
           const Expanded(
             child: Padding(
                 padding: EdgeInsets.only(right: 16, left: 16),
-                child: SearchWidget()),
+                child: SearchWidget()
+            ),
           ),
           Padding(
               padding: const EdgeInsets.only(right: 16),
               child: WebsafeSvg.asset("assets/icons/ic_bell.svg",
-                  color: primaryColor)),
+                  color: primaryColor)
+          ),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [CategoryHome(), BannerHome(), DealOfDay()],
+            children: [
+              CategoryHome(),
+              BannerHome(),
+              DealOfDay()],
           ),
         ),
       ),

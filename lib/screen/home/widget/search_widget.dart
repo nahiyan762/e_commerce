@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:qcoom_shopping/constants.dart';
+import 'package:qcoom_shopping/size_config.dart';
 import 'package:websafe_svg/websafe_svg.dart';
-
-import '../../../constants.dart';
 
 class SearchWidget extends StatelessWidget {
   const SearchWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 4),
       decoration: BoxDecoration(
@@ -37,7 +39,7 @@ class SearchWidget extends StatelessWidget {
             ),
             ),
           Expanded(
-            flex: 2,
+            flex: SizeConfig.isMobile(context) ? 2 : 1,
             child: Padding(
               padding: const EdgeInsets.all(4),
               child: Container(
