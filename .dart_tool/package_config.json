@@ -50,6 +50,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "curved_navigation_bar",
+      "rootUri": "file:///Users/qcoom/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/curved_navigation_bar-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "equatable",
       "rootUri": "file:///Users/qcoom/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/equatable-1.2.6",
       "packageUri": "lib/",
@@ -284,7 +290,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-31T09:12:06.437075Z",
+  "generated": "2021-10-31T10:36:43.976422Z",
   "generator": "pub",
   "generatorVersion": "2.14.3"
 }

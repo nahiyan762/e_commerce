@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:qcoom_shopping/screen/home/home_screen.dart';
+import 'package:qcoom_shopping/screen/main_screen.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 import '../constants.dart';
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigateToHome() {
-    Timer(const Duration(seconds: 5), ()=> Navigator.of(context).pushReplacementNamed(HomeScreen.routeName));
+    Timer(const Duration(seconds: 5), ()=> Navigator.of(context).pushReplacementNamed(MainScreen.routeName));
   }
   
   @override
