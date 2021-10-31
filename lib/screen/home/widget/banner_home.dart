@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:qcoom_shopping/size_config.dart';
 
 import '../../../constants.dart';
 
@@ -19,6 +20,7 @@ class BannerHome extends StatelessWidget {
 
     return Container(
       width: double.infinity,
+      height: SizeConfig.isMobile(context) ? (SizeConfig.screenHeight!/5) : (SizeConfig.screenHeight!/2),
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: ImageSlideshow(
         isLoop: true,

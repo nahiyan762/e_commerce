@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qcoom_shopping/constants.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../../size_config.dart';
@@ -40,7 +41,7 @@ class CategoryHome extends StatelessWidget {
                               const SizedBox(height: 8),
                               Text(categories[index]["text"],
                                   textAlign: TextAlign.center,
-                                  style: Theme.of(context).textTheme.subtitle2)
+                                  style: subTitleStyle)
                             ],
                           ),
                         ),
