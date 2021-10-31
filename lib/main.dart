@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:qcoom_shopping/routes.dart';
-import 'package:qcoom_shopping/size_config.dart';
+import 'package:flutter/services.dart';
 import 'package:qcoom_shopping/theme.dart';
 
 import 'screen/splash_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(const MyApp());
 }
 

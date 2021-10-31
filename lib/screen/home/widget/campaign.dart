@@ -9,10 +9,8 @@ class Campaign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Column(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -44,7 +42,6 @@ class Campaign extends StatelessWidget {
                 ))
           ],
         ),
-      ),
     );
   }
 }

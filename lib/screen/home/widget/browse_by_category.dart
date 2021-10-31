@@ -10,15 +10,22 @@ class BrowsByCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 16, right: 16),
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Brows By Category', style: titleStyle),
+          Row(
+            children: [
+              Text('Brows By Category', style: titleStyle),
+              Spacer(),
+              Text('See More', style: subTitleStyle)
+            ],
+          ),
           SizedBox(height: 8),
           Container(
             child: GridView.builder(
               shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: SizeConfig.isMobile(context) ? 3 : 4,
                 childAspectRatio: 50 / 60,
