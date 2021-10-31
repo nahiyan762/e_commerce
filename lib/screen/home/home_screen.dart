@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:qcoom_shopping/constants.dart';
 import 'package:qcoom_shopping/screen/home/widget/banner_home.dart';
+import 'package:qcoom_shopping/screen/home/widget/browse_by_category.dart';
+import 'package:qcoom_shopping/screen/home/widget/campaign.dart';
 import 'package:qcoom_shopping/screen/home/widget/category_home.dart';
 import 'package:qcoom_shopping/screen/home/widget/deal_of_day.dart';
-import 'package:qcoom_shopping/screen/home/widget/search_widget.dart';
+import 'package:qcoom_shopping/widget/search_widget.dart';
 import 'package:qcoom_shopping/size_config.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
@@ -38,7 +40,10 @@ class HomeScreen extends StatelessWidget {
             children: [
               CategoryHome(),
               BannerHome(),
-              DealOfDay()],
+              DealOfDay(),
+              Campaign(),
+              BrowsByCategory()
+            ],
           ),
         ),
       ),

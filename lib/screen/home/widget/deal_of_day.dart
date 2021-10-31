@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qcoom_shopping/constants.dart';
-import 'package:qcoom_shopping/screen/home/widget/countdown_widget.dart';
+import 'package:qcoom_shopping/widget/countdown_widget.dart';
 import 'package:qcoom_shopping/screen/home/widget/shop_item.dart';
 
 class DealOfDay extends StatelessWidget {
