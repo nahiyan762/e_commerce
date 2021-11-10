@@ -1,11 +1,12 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qcoom_shopping/constants.dart';
 import 'package:qcoom_shopping/screen/account/account_screen.dart';
 import 'package:qcoom_shopping/screen/cart/cart_screen.dart';
 import 'package:qcoom_shopping/screen/home/home_screen.dart';
 import 'package:qcoom_shopping/screen/orders/order_screen.dart';
 import 'package:qcoom_shopping/screen/wishlist/wishlist_screen.dart';
+import 'package:websafe_svg/websafe_svg.dart';
 
 class MainScreen extends StatefulWidget {
   static const routeName = '/main_screen';
@@ -17,33 +18,51 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  var page = 2;
+  final pages = [
+    const WishListScreen(),
+    const OrderScreen(),
+    const HomeScreen(),
+    const CartScreen(),
+    const AccountScreen()
+  ];
 
-  var page = 0;
-  final pages = [WishListScreen(), OrderScreen(), HomeScreen(), CartScreen(), AccountScreen()];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        index: 2,
-        color: canvasColor,
-        backgroundColor: Colors.white,
-        buttonBackgroundColor: primaryColor,
-        animationCurve: Curves.easeInOut,
-        animationDuration: Duration(milliseconds: 300),
-        onTap: (index) {
-         setState(() {
-           page = index;
-         });
-        },
-        items: [
-          Icon(Icons.favorite_border),
-          Icon(Icons.add),
-          Icon(Icons.home_outlined),
-          Icon(Icons.favorite_border),
-          Icon(Icons.add),
-        ],
-      ),
-      body: pages[page],
+    return ScreenUtilInit(
+        builder: () => Scaffold(
+              body: pages[page],
+              bottomNavigationBar: BottomNavigationBar(
+                onTap: (newIndex) => setState(() => page = newIndex),
+                type: BottomNavigationBarType.fixed,
+                selectedItemColor: kTitleTextColor,
+                unselectedItemColor: kTitleTextColor,
+                currentIndex: page,
+                items: [
+                  BottomNavigationBarItem(
+                    icon: WebsafeSvg.asset("assets/icons/ic_wishlist.svg"),
+                    label: 'Wishlist',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: WebsafeSvg.asset("assets/icons/ic_order.svg"),
+                    label: 'Order',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: WebsafeSvg.asset("assets/images/qcoom_logo_green.svg",
+                        width: 45.w, height: 45.h),
+                    label: '',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: WebsafeSvg.asset("assets/icons/ic_cart.svg"),
+                    label: 'Cart',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: WebsafeSvg.asset("assets/icons/ic_more.svg"),
+                    label: 'Account',
+                  ),
+                ],
+              ),
+            )
     );
   }
 }

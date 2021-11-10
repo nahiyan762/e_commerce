@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qcoom_shopping/constants.dart';
+import 'package:qcoom_shopping/provider/product_provider.dart';
 import 'package:qcoom_shopping/screen/home/widget/banner_home.dart';
 import 'package:qcoom_shopping/screen/home/widget/browse_by_category.dart';
 import 'package:qcoom_shopping/screen/home/widget/campaign.dart';
@@ -38,7 +39,7 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: const [
               CategoryHome(),
               BannerHome(),
               DealOfDay(),

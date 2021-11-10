@@ -54,7 +54,7 @@
         <entry key="cupertino_icons">
           <value>
             <list>
-              <option value="$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3/lib" />
+              <option value="$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4/lib" />
             </list>
           </value>
         </entry>
@@ -104,6 +104,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_screenutil">
+          <value>
+            <list>
+              <option value="$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.0.0+2/lib" />
             </list>
           </value>
         </entry>
@@ -341,13 +348,14 @@
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1/lib" />
-      <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3/lib" />
+      <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/curved_navigation_bar-1.0.1/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/equatable-1.2.6/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/fl_chart-0.12.3/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_image_slideshow-0.1.2/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib" />
+      <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.0.0+2/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_staggered_grid_view-0.4.1/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.19.3/lib" />
       <root url="file://$USER_HOME$/FlutterDev/flutter/.pub-cache/hosted/pub.dartlang.org/hexcolor-2.0.5/lib" />
