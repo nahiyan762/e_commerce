@@ -3,9 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qcoom_shopping/constants.dart';
 import 'package:qcoom_shopping/model/account_item_entity.dart';
 import 'package:qcoom_shopping/screen/signIn/sign_in_screen.dart';
-import 'package:qcoom_shopping/screen/splash/splash_screen.dart';
 import 'package:websafe_svg/websafe_svg.dart';
-
 import 'account_item.dart';
 
 class AccountScreen extends StatelessWidget {

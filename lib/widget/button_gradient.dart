@@ -5,7 +5,8 @@ class ButtonGradient extends StatelessWidget {
   final double width;
   final double height;
   final double fontSize;
-  const ButtonGradient(this.width, this.height, this.fontSize, {Key? key}) : super(key: key);
+  final String title;
+  const ButtonGradient(this.width, this.height, this.fontSize, this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class ButtonGradient extends StatelessWidget {
           )
       ),
       child: Center(
-          child: Text('Login', style: TextStyle(color: Colors.white, fontSize: fontSize))
+          child: Text(title, style: TextStyle(color: Colors.white, fontSize: fontSize))
       ),
     );
   }

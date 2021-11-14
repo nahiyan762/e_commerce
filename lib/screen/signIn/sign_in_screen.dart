@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qcoom_shopping/constants.dart';
+import 'package:qcoom_shopping/screen/signUp/sign_up_screen.dart';
 import 'package:qcoom_shopping/widget/button_gradient.dart';
 import 'package:qcoom_shopping/widget/input_password_field.dart';
 import 'package:qcoom_shopping/widget/input_text_field.dart';
@@ -71,24 +72,29 @@ class SignInScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.w),
-                      child: Row(
-                        children: [
-                          Spacer(),
-                          RememberPassword(14.sp)
-                        ],
+                      child: Container(
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: RememberPassword(14.sp, 'Remember password'),
+                        ),
                       ),
                     ),
                     SizedBox(height: 33.h),
-                    ButtonGradient(204.w, 43.h, 14.sp),
+                    ButtonGradient(204.w, 43.h, 14.sp, 'Log In'),
                     SizedBox(height: 60.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Don\'t have an account?',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w500)
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, SignUpScreen.routeName);
+                          },
+                          child: Text('Don\'t have an account?',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w500)
+                          ),
                         ),
                         SizedBox(width: 4.w),
                         Text('Sign up',

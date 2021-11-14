@@ -3,16 +3,18 @@ import 'package:qcoom_shopping/constants.dart';
 
 class RememberPassword extends StatefulWidget {
   final double fontSize;
-  const RememberPassword(this.fontSize, {Key? key}) : super(key: key);
+  final String title;
+  const RememberPassword(this.fontSize, this.title, {Key? key}) : super(key: key);
 
   @override
-  _RememberPasswordState createState() => _RememberPasswordState(fontSize);
+  _RememberPasswordState createState() => _RememberPasswordState(fontSize, title);
 }
 
 class _RememberPasswordState extends State<RememberPassword> {
   bool isChecked = false;
   final double fontSize;
-  _RememberPasswordState(this.fontSize);
+  final String title;
+  _RememberPasswordState(this.fontSize, this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +30,7 @@ class _RememberPasswordState extends State<RememberPassword> {
       return primaryColor;
     }
     return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Checkbox(
             checkColor: Colors.white,
@@ -39,7 +42,7 @@ class _RememberPasswordState extends State<RememberPassword> {
               });
             },
           ),
-          Text('Remember Password', style: TextStyle(color: kTitleTextColor, fontWeight: FontWeight.w400, fontSize: fontSize),)
+          Text(title, style: TextStyle(color: kTitleTextColor, fontWeight: FontWeight.w400, fontSize: fontSize),)
         ],
     );
   }
