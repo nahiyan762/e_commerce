@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/qcoom/shopping/qcoom_shopping/BuildConfig.java
+ com.qcoom.shopping.qcoom_shopping.BuildConfig
