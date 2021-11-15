@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:qcoom_shopping/widget/operator_item.dart';
+
+import '../size_config.dart';
 
 class OperatorDropDown extends StatefulWidget {
   const OperatorDropDown({Key? key}) : super(key: key);
@@ -8,13 +11,13 @@ class OperatorDropDown extends StatefulWidget {
 }
 
 class _OperatorDropDownState extends State<OperatorDropDown> {
-  var operators = ['880', '91', '008'];
-  var dropdownValue = '880';
+  var operators = ['Select OP','880', '91', '008'];
+  var dropdownValue = 'Select OP';
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         border: Border.all(width: 1, color: Colors.grey),
         borderRadius: BorderRadius.circular(8)
@@ -22,17 +25,15 @@ class _OperatorDropDownState extends State<OperatorDropDown> {
       child: DropdownButtonHideUnderline(
         child: DropdownButton(
           value: dropdownValue,
-          icon: const Icon(Icons.arrow_downward),
+          icon: Icon(Icons.arrow_downward),
           iconSize: 24,
           elevation: 16,
-          style: const TextStyle(color: Colors.deepPurple),
-          underline: Container(
-            height: 2,
-            color: Colors.deepPurpleAccent,
-          ),
           onChanged: (String? newValue) {
             setState(() {
               dropdownValue = newValue!;
+              if(dropdownValue != "Select OP") {
+                _modalBottomSheetMenu(context);
+              }
             });
           },
           items: operators.map<DropdownMenuItem<String>>((String value) {
@@ -40,8 +41,9 @@ class _OperatorDropDownState extends State<OperatorDropDown> {
               value: value,
               child: Row(
                 children: [
-                  const Icon(Icons.ten_mp_outlined),
-                  Text(value)
+                  if (value != 'Select OP') Icon(Icons.ten_mp_outlined),
+                  SizedBox(width: 4),
+                  Text(value, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),)
                 ],
               ),
             );
@@ -49,5 +51,26 @@ class _OperatorDropDownState extends State<OperatorDropDown> {
         ),
       ),
     );
+  }
+
+  void _modalBottomSheetMenu(BuildContext context) {
+    SizeConfig().init(context);
+    showModalBottomSheet(
+        context: context,
+        builder: (builder) {
+          return Container(
+            height: SizeConfig.screenHeight!/2,
+            color: Colors.transparent,
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+              ),
+              itemBuilder: (context, index) {
+                return OperatorItem();
+              },
+              itemCount: 4,
+            ),
+          );
+        });
   }
 }

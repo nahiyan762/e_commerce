@@ -13,7 +13,6 @@ class SignInScreen extends StatelessWidget {
   static const routeName = '/sign_in_screen';
   const SignInScreen({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
